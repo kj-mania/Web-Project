@@ -2,7 +2,7 @@
 A creative portfolio for sports graphics, photography, and videography.
 
 # Live Site 🌐 
-[https://kj-mania.github.io/Web-Project/](https://github.com/kj-mania/Web-Project)
+[https://github.com/kj-mania/Web-Project](https://kj-mania.github.io/Web-Project/)
 
 # What’s Inside 🎯
 - Sports graphics
