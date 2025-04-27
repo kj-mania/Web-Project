@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Products | Clips by KJ</title>
-        <meta name="description" content="Shop digital products by Clips by KJ, including sports design templates and t-shirt mockups — crafted for creatives, athletes, and designers.">
-        <link rel="stylesheet" href="project.css">
-        <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css">
-    </head>
-    
+<head>
+    <title>Products | Clips by KJ</title>
+    <meta name="description" content="Shop digital products by Clips by KJ, including sports design templates and t-shirt mockups — crafted for creatives, athletes, and designers.">
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css">
+</head>
+
 <body>
-    <header class="headerBar">
+    <header class="headerBar fade-in">
         <div class="logo">
             <img src="cbkj.png" alt="Logo">
         </div>
@@ -28,8 +28,8 @@
         </div>
     </header>
 
-    <section class="content">
-        <div class="products-intro">
+    <section class="content fade-in">
+        <div class="products-intro fade-in">
             <h1 class="products-header">Premium Digital Products</h1>
             <p class="products-description">
                 Elevate your creative projects with our professionally designed templates. 
@@ -37,9 +37,9 @@
             </p>
         </div>
         
-        <div class="portfolio-gallery">
+        <div class="portfolio-gallery fade-in">
             <div class="portfolio-grid">
-                <div class="portfolio-item product-item">
+                <div class="portfolio-item product-item fade-in">
                     <img src="ZBShirt.jpg" alt="tshirt design template">
                     <div class="portfolio-caption">
                         <h3>T-Shirt Design Template</h3>
@@ -54,7 +54,7 @@
                         </button>
                     </div>
                 </div>                
-                <div class="portfolio-item product-item">
+                <div class="portfolio-item product-item fade-in">
                     <img src="visit.jpg" alt="Sports Design Template">
                     <div class="portfolio-caption">
                         <h3>Sports Design Template</h3>
@@ -73,7 +73,7 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
         <p>kandre15@my.westga.edu</p>
@@ -87,7 +87,21 @@
             </ul>
         </nav>    
     </footer>
+
+    <!-- Snipcart -->
     <script async src="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.js"></script>
     <div hidden id="snipcart" data-api-key="ZWJmMDBlOTYtOGE3Mi00YTVlLTg2MmQtMGVmZDUwYjkzNWI0NjM4ODAzNjQwNDUyNzk4NTk3" data-config-modal-style="side"></div>
+
+    <script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>

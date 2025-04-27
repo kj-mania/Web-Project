@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Portfolio</title>
-        <meta name="description" content="Explore KJ's portfolio featuring high-impact sports graphics, photography, and videography — trusted by athletes, brands, and D1 programs.">
-        <link rel="stylesheet" href="project.css">
-    </head>    
+<head>
+    <title>Portfolio</title>
+    <meta name="description" content="Explore KJ's portfolio featuring high-impact sports graphics, photography, and videography — trusted by athletes, brands, and D1 programs.">
+    <link rel="stylesheet" href="project.css">
+</head>    
+
 <body>
 
-    <header class="headerBar">
+    <header class="headerBar fade-in">
         <div class="logo">
             <img src="cbkj.png" alt="Logo">
         </div>
@@ -22,97 +23,96 @@
         </nav>
     </header>
 
-    <section class="portfolio-gallery">
+    <section class="portfolio-gallery fade-in">
 
         <!-- graphics section -->
-        <div class="portfolio-category">
+        <div class="portfolio-category fade-in">
             <h2>Graphics</h2>
-            <h3>I create a range of graphics specializing in high-impact sports visuals.
-            </h3>
+            <h3>I create a range of graphics specializing in high-impact sports visuals.</h3>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="CamBeasleyCommittment.jpg" alt="Sewanee university athlete committment graphic">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="KJCommittment.jpg" alt="UWG Track and field track committment graphic">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="West.jpg" alt="UWG Football recruiting graphic">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="Knoxcommit.jpg" alt="Shorter University football committment graphic">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="NickReeves Committment.jpg" alt="UGA football committment graphic">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="LeadThePack.jpg" alt="UWG Football recruiting graphic">
                 </div>
             </div>
         </div>
 
-        <!--Second-->
-        <div class="portfolio-category">
+        <!-- Second -->
+        <div class="portfolio-category fade-in">
             <h2>Photography</h2>
             <h3>I specialize in all kinds of photos, including but not limited to: <br> sports, lifestyle, studio, etc.</h3>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="DSC01103.jpg" alt="Man proposing to girlfriend at waterfall">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="DSC00545.jpg" alt="Players and coach yelling in middle">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="DSC05143-Edit.jpg" alt="Girl holding flowers in front of lake">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="DSC07306.jpg" alt="Basketball player posing in front of black cyclorama">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="DSC03315-2.jpg" alt="Pole vaulter midair over bar in sky">
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <img src="DSC00031.jpg" alt="Basketball player dunking ball">
                 </div>
             </div>
         </div>
 
-        <!--third-->
-        <div class="portfolio-category">
+        <!-- Third -->
+        <div class="portfolio-category fade-in">
             <h2>Videography - Coming Soon</h2>
             <h3>I specialize in sports highlight/hype videos as well as weddings</h3>
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <video controls width="100%">
                         <source src="mjj.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <video controls width="100%">
                         <source src="BrayVSTSA.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <video controls width="100%">
                         <source src="o.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <video controls width="100%">
                         <source src="ShaunWedding.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <video controls width="100%">
                         <source src="C452990_1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item fade-in">
                     <video controls width="100%">
                         <source src="chris.mp4" type="video/mp4">
                         Your browser does not support the video tag.
@@ -120,11 +120,10 @@
                 </div>
             </div>
         </div>
+
     </section>
 
-
-
-    <footer class="footer">
+    <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
         <p>kandre15@my.westga.edu</p>
@@ -138,6 +137,19 @@
             </ul>
         </nav>
     </footer>
+
+    <!-- Fade-in Script -->
+    <script>
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 
 </body>
 </html>
