@@ -1089,11 +1089,34 @@ color: white !important;
       display: block;
     }
   }
-
   .hamburger span {
     display: block !important;
-    width: 100% !important;         /* make each bar as wide as the button */
-    height: 3px !important;         /* bar thickness */
+    width: 100% !important;
+    height: 3px !important;
     background-color: white !important;
     border-radius: 2px !important;
   }
+
+  .hamburger {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 32px !important;
+    height: 24px !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    border: none;
+    z-index: 5000;
+  }
+  
+  .hamburger span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important;
+    margin: 2px 0 !important;
+    background-color: white !important;
+    border-radius: 2px !important;
+  }
+  
