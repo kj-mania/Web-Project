@@ -951,3 +951,28 @@ color: white !important;
     opacity: 1;
     transform: translateY(0);
   }
+
+
+.snipcart-modal__overlay,
+  .snipcart-modal__container,
+  .snipcart-modal,
+  .snipcart-cart,
+  .snipcart-checkout {
+    position: fixed !important;
+    z-index: 9999 !important;
+}
+.snipcart-modal__overlay {
+    background: transparent !important;
+}
+.snipcart-modal__container {
+    background: white !important;
+    width: 340px !important;   
+    max-width: 100% !important;
+    right: 0 !important;
+    left: auto !important;
+}
+.snipcart-modal__content,
+.snipcart-cart {
+    width: 100% !important;
+    background: transparent !important;
+}
