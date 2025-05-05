@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Explore the cameras, lenses, software, and coding tools I use for every project—high-performance gear meets creative expertise.">
+        <title>Gear &amp; Tools | Clips by KJ</title>
+        <link rel="stylesheet" href="project.css">
+        <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
+      </head> 
+<body>
+  <header class="headerBar">
+    <div class="logo">
+      <img src="cbkj.png" alt="CBKJ Logo">
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+      <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="connect.html">Contact</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="tools.html" class="active">Gear &amp; Tools</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="gear-section fade-in">
+    <h2>Gear &amp; Tools</h2>
+    <div class="gear-grid">
+      <div class="gear-item fade-in">
+        <img src="premiere.png" alt="Adobe Premiere Pro Logo">
+        <h3>Adobe Premiere Pro</h3>
+        <p>My go-to NLE for color grading and precise editing.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="photoshop.png" alt="Adobe Photoshop Logo">
+        <h3>Adobe Photoshop</h3>
+        <p>Essential for detailed photo retouching and graphic mockups.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="ae.png" alt="Adobe After Effects Logo">
+        <h3>Adobe After Effects</h3>
+        <p>Powerful tool for motion graphics and dynamic visual effects.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="lightroom.png" alt="Adobe Lightroom Logo">
+        <h3>Adobe Lightroom</h3>
+        <p>Rapid batch editing and consistent color workflows for photos.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="python.webp" alt="Python Logo">
+        <h3>Python</h3>
+        <p>Automate repetitive tasks and build custom processing scripts.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="js.webp" alt="JavaScript Logo">
+        <h3>JavaScript</h3>
+        <p>Enhance interactive web elements on my portfolio site.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="java.png" alt="Java Logo">
+        <h3>Java</h3>
+        <p>Power backend services and tools for data-driven workflows.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="css3.png" alt="CSS Logo">
+        <h3>CSS</h3>
+        <p>Craft responsive, modern designs with precise control over layouts.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="fx3-removebg-preview.png" alt="Sony FX3 Camera">
+        <h3>Sony FX3</h3>
+        <p>Compact cinema camera delivering stunning low-light performance.</p>
+      </div>
+
+      <div class="gear-item fade-in">
+        <img src="bmagic.png" alt="Blackmagic Pocket Cinema Camera 6K">
+        <h3>Blackmagic Pocket Cinema 6K</h3>
+        <p>High-resolution footage and versatile RAW recording for pro quality.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer fade-in">
+    <br>
+    <p>Kellen Andrews</p>
+    <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="products.html">products</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="connect.html">connect</a></li>
+        <li><a href="testimonials.html">testimonials</a></li>
+        <li><a href="tools.html" class="active">gear &amp; tools</a></li>
+      </ul>
+    </nav>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible'));
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const navPanel  = document.getElementById('navPanel');
+      const navClose  = document.getElementById('navClose');
+      hamburger.addEventListener('click',  () => navPanel.classList.add('open'));
+      navClose.addEventListener('click',    () => navPanel.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>

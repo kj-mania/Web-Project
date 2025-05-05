@@ -2,30 +2,37 @@
 <html lang="en">
 <head>
     <title>Portfolio</title>
-    <meta name="description" content="Explore KJ's portfolio featuring high-impact sports graphics, photography, and videography — trusted by athletes, brands, and D1 programs.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Browse KJ’s portfolio of high-impact sports graphics, dynamic photography, and cinematic videos trusted by athletes and brands.">
     <link rel="stylesheet" href="project.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
 </head>    
 
 <body>
 
-    <header class="headerBar fade-in">
+    <header class="headerBar">
         <div class="logo">
-            <img src="cbkj.png" alt="Logo">
+          <img src="cbkj.png" alt="CBKJ Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="portfolio.html" class="active">portfolio</a></li>
-                <li><a href="products.html">products</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="connect.html">connect</a></li>
-            </ul>
+              <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+          <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html" class="active">Portfolio</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="connect.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="tools.html">Gear/Tools</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <section class="portfolio-gallery fade-in">
-
-        <!-- graphics section -->
         <div class="portfolio-category fade-in">
             <h2>Graphics</h2>
             <h3>I create a range of graphics specializing in high-impact sports visuals.</h3>
@@ -51,7 +58,6 @@
             </div>
         </div>
 
-        <!-- Second -->
         <div class="portfolio-category fade-in">
             <h2>Photography</h2>
             <h3>I specialize in all kinds of photos, including but not limited to: <br> sports, lifestyle, studio, etc.</h3>
@@ -77,68 +83,59 @@
             </div>
         </div>
 
-        <!-- Third -->
         <div class="portfolio-category fade-in">
-            <h2>Videography - Coming Soon</h2>
+            <h2>Videography</h2>
             <h3>I specialize in sports highlight/hype videos as well as weddings</h3>
             <div class="portfolio-grid">
-                <div class="portfolio-item fade-in">
-                    <video controls width="100%">
-                        <source src="mjj.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+
+            <div class="portfolio-item fade-in">
+                <a href="https://www.instagram.com/braydnemory/reel/DDqwmOoOKtS/" target="_blank" rel="noopener noreferrer">
+                <div class="video-thumb">
+                    <img src="braythumb.png" alt="Brayden Emory mixtape">
+                    <span class="play-overlay">▶</span>
                 </div>
-                <div class="portfolio-item fade-in">
-                    <video controls width="100%">
-                        <source src="BrayVSTSA.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                </a>
+            </div>
+            <div class="portfolio-item fade-in">
+                <a href="https://www.instagram.com/p/C1m_BWdufwE/" target="_blank" rel="noopener noreferrer">
+                <div class="video-thumb">
+                    <img src="joshthumb.png" alt="Josh Jackson Mixtape">
+                    <span class="play-overlay">▶</span>
                 </div>
-                <div class="portfolio-item fade-in">
-                    <video controls width="100%">
-                        <source src="o.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                </a>
+            </div>
+            <div class="portfolio-item fade-in">
+                <a href="https://www.instagram.com/p/C1x3GO1R-g2/" target="_blank" rel="noopener noreferrer">
+                <div class="video-thumb">
+                    <img src="kadenthumb.png" alt="Kaden Douglas Mixtape">
+                    <span class="play-overlay">▶</span>
                 </div>
-                <div class="portfolio-item fade-in">
-                    <video controls width="100%">
-                        <source src="ShaunWedding.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <video controls width="100%">
-                        <source src="C452990_1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="portfolio-item fade-in">
-                    <video controls width="100%">
-                        <source src="chris.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                </a>
+            </div>
+
             </div>
         </div>
+        
 
     </section>
 
     <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
-        <p>kandre15@my.westga.edu</p>
+        <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
         <nav>
             <ul>
                 <li><a href="index.html">home</a></li>
                 <li><a href="portfolio.html" class="active">portfolio</a></li>
                 <li><a href="products.html">products</a></li>
                 <li><a href="about.html">about</a></li>
-                <li><a href="connect.html">contact</a></li>
+                <li><a href="connect.html">connect</a></li>
+                <li><a href="testimonials.html">testimonials</a></li>
+                <li><a href="tools.html">gear &amp; tools</a></li>
             </ul>
         </nav>
     </footer>
 
-    <!-- Fade-in Script -->
     <script>
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -150,6 +147,16 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const hamburger = document.getElementById('hamburger');
+          const navPanel  = document.getElementById('navPanel');
+          const navClose  = document.getElementById('navClose');
+      
+          hamburger.addEventListener('click',  () => navPanel.classList.add('open'));
+          navClose.addEventListener('click',    () => navPanel.classList.remove('open'));
+        });
+      </script>
 
 </body>
 </html>

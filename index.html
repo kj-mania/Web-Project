@@ -2,25 +2,36 @@
 <html lang="en">
 <head>
     <title>Homepage</title>
-    <meta name="description" content="Creative sports visuals, graphics, photography, and videography by Kellen Andrews — high-impact content at affordable prices.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Creative sports visuals, graphics, photography, and videography by Kellen Andrews—high-impact content at affordable prices.">
     <link rel="stylesheet" href="project.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
 </head>
 
 <body>
-    <header class="headerBar fade-in">
+    <header class="headerBar">
         <div class="logo">
-            <img src="cbkj.png" alt="Logo">
+          <img src="cbkj.png" alt="CBKJ Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">home</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="products.html">products</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="connect.html">connect</a></li>
-            </ul>
-        </nav>        
-    </header>
+      
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      
+        <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+          <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+          <ul class="nav-list">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="connect.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="tools.html">Gear/Tools</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <section class="heroSection fade-in">
         <video autoplay muted loop playsinline class="heroVideo">
@@ -65,17 +76,18 @@
     <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
-        <p>kandre15@my.westga.edu</p>
+        <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
         <nav>
             <li><a href="index.html" class="active">home</a></li>
             <li><a href="portfolio.html">portfolio</a></li>
             <li><a href="products.html">products</a></li>
             <li><a href="about.html">about</a></li>
             <li><a href="connect.html">connect</a></li>
+            <li><a href="testimonials.html">testimonials</a></li>
+            <li><a href="tools.html">gear &amp; tools</a></li>
         </nav>    
     </footer>
 
-    <!--fade in-->
     <script>
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -87,5 +99,15 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const navPanel  = document.getElementById('navPanel');
+      const navClose  = document.getElementById('navClose');
+  
+      hamburger.addEventListener('click',  () => navPanel.classList.add('open'));
+      navClose.addEventListener('click',    () => navPanel.classList.remove('open'));
+    });
+  </script>
 </body>
 </html>

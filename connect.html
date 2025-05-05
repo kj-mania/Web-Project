@@ -2,25 +2,36 @@
 <html lang="en">
 <head>
     <title>Contact</title>
-    <meta name="description" content="Contact Kellen Andrews (Clips by KJ) for inquiries, bookings, or collaborations in sports visuals, photography, and videography.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Get in touch with Kellen Andrews for bookings, inquiries, or collaborations in sports graphics, photography, and videography.">
     <link rel="stylesheet" href="project.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
 </head>
 
 <body>
-    <header class="headerBar fade-in">
+    <header class="headerBar">
         <div class="logo">
-            <img src="cbkj.png" alt="Logo">
+          <img src="cbkj.png" alt="CBKJ Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="products.html">products</a></li>
-                <li><a href="about.html">about</a></li>
-                <li><a href="connect.html" class="active">connect</a></li>
-            </ul>
+      
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      
+        <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+          <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="connect.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="tools.html">Gear/Tools</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <section class="contact-section fade-in">
         <h2>Let's Connect</h2>
@@ -49,19 +60,20 @@
     <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
-        <p>kandre15@my.westga.edu</p>
+        <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
         <nav>
             <ul>
                 <li><a href="index.html">home</a></li>
                 <li><a href="portfolio.html">portfolio</a></li>
                 <li><a href="products.html">products</a></li>
                 <li><a href="about.html">about</a></li>
-                <li><a href="connect.html">connect</a></li>
+                <li><a href="connect.html" class="active">connect</a></li>
+                <li><a href="testimonials.html">testimonials</a></li>
+                <li><a href="tools.html">gear &amp; tools</a></li>
             </ul>
         </nav>
     </footer>
 
-    <!-- Fade-in Script -->
     <script>
     const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
@@ -73,6 +85,16 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const hamburger = document.getElementById('hamburger');
+          const navPanel  = document.getElementById('navPanel');
+          const navClose  = document.getElementById('navClose');
+      
+          hamburger.addEventListener('click',  () => navPanel.classList.add('open'));
+          navClose.addEventListener('click',    () => navPanel.classList.remove('open'));
+        });
+      </script>
 
 </body>
 </html>

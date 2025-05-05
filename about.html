@@ -2,30 +2,37 @@
 <html lang="en">
 <head>
     <title>About</title>
-    <meta name="description" content="Learn about KJ — a college athlete, developer, and creative professional offering top-quality sports visuals, graphics, and videography at affordable rates.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Learn about KJ—college athlete, developer, and creative professional offering top-quality sports visuals, graphics, and videography at fair rates.">
     <link rel="stylesheet" href="project.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
 </head>
 
 <body>
 
-    <header class="headerBar fade-in">
+    <header class="headerBar">
         <div class="logo">
-            <img src="cbkj.png" alt="Logo">
+          <img src="cbkj.png" alt="CBKJ Logo">
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">home</a></li>
-                <li><a href="portfolio.html">portfolio</a></li>
-                <li><a href="products.html">products</a></li>
-                <li><a href="about.html" class="active">about</a></li>
-                <li><a href="connect.html">connect</a></li>
-            </ul>
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+          <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="connect.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="tools.html">Gear/Tools</a></li>
+          </ul>
         </nav>
-    </header>
+      </header>
 
     <section class="about-content fade-in">
-
-        <!-- First Section -->
         <div class="about-section fade-in">
             <img src="SelfPic.jpg" alt="Image of KJ in track uniform">
             <div class="text">
@@ -37,7 +44,6 @@
         </div>
 
         <section class="about-pricing-row fade-in">
-            <!-- Pricing Column -->
             <div class="about-column">
                 <h2>Pricing</h2>
                 <table class="pricing-table">
@@ -51,24 +57,23 @@
                     <tbody>
                         <tr>
                             <td>photo</td>
-                            <td>$TBD</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                            <td>$150/hr</td>
+                            <td>Get high-resolution digital files with professional retouching and color correction, delivered via a secure online proofing gallery for easy selection. Choose from on-location or studio shoots, customizable packages, fast turnaround, and optional print products—all tailored to your needs and budget.</td>
                         </tr>
                         <tr>
                             <td>video</td>
-                            <td>$TBD</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                            <td>$100/hr</td>
+                            <td>Get cinematic highlight reels with dynamic editing, professional color grading, and custom motion graphics, delivered in broadcast- and social-media-ready formats. Enjoy drone and multi-camera coverage, licensed music, fast turnaround, and optional raw footage delivery—all tailored to your event or brand.</td>
                         </tr>
                         <tr>
                             <td>graphic</td>
-                            <td>$TBD</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+                            <td>$75/Unit</td>
+                            <td>Get high-impact graphics with custom sports visuals, dynamic typography, and layered compositions—delivered in print- and digital-ready formats. Includes editable vector source files, up to two rounds of revisions, and cohesive brand-aligned color palettes tailored to your project.</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
-      
         <section class="faq-section fade-in">
             <h2>FAQ</h2>
             <div class="faq-container">
@@ -100,7 +105,7 @@
     <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
-        <p>kandre15@my.westga.edu</p>
+        <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
         <nav>
             <ul>
                 <li><a href="index.html">home</a></li>
@@ -108,6 +113,8 @@
                 <li><a href="products.html">products</a></li>
                 <li><a href="about.html" class="active">about</a></li>
                 <li><a href="connect.html">connect</a></li>
+                <li><a href="testimonials.html">testimonials</a></li>
+                <li><a href="tools.html">gear &amp; tools</a></li>
             </ul>
         </nav>
     </footer>
@@ -124,6 +131,16 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const hamburger = document.getElementById('hamburger');
+          const navPanel  = document.getElementById('navPanel');
+          const navClose  = document.getElementById('navClose');
+      
+          hamburger.addEventListener('click',  () => navPanel.classList.add('open'));
+          navClose.addEventListener('click',    () => navPanel.classList.remove('open'));
+        });
+      </script>
 
 </body>
 </html>

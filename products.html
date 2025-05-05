@@ -2,31 +2,37 @@
 <html lang="en">
 <head>
     <title>Products | Clips by KJ</title>
-    <meta name="description" content="Shop digital products by Clips by KJ, including sports design templates and t-shirt mockups — crafted for creatives, athletes, and designers.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Shop digital design products from Clips by KJ—premium templates for t-shirts, sports graphics, and social media, instantly downloadable.">    
     <link rel="stylesheet" href="project.css">
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.3.1/default/snipcart.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
 </head>
 
 <body>
-    <header class="headerBar fade-in">
+    <header class="headerBar">
         <div class="logo">
-            <img src="cbkj.png" alt="Logo">
+          <img src="cbkj.png" alt="CBKJ Logo">
         </div>
-        <div class="header-right"> 
-            <nav>
-                <ul>
-                    <li><a href="index.html">home</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
-                    <li><a href="products.html" class="active">products</a></li>
-                    <li><a href="about.html">about</a></li>
-                    <li><a href="connect.html">connect</a></li>
-                </ul>
-            </nav>
-            <button class="snipcart-checkout header-cart">
-                🛒 <span class="snipcart-items-count">0</span>
-            </button>
-        </div>
-    </header>
+      
+        <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      
+        <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+          <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="products.html" class="active">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="connect.html">Contact</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+            <li><a href="tools.html">Gear/Tools</a></li>
+          </ul>
+        </nav>
+      </header>
 
     <section class="content fade-in">
         <div class="products-intro fade-in">
@@ -76,7 +82,7 @@
     <footer class="footer fade-in">
         <br>
         <p>Kellen Andrews</p>
-        <p>kandre15@my.westga.edu</p>
+        <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
         <nav>
             <ul>
                 <li><a href="index.html">home</a></li>
@@ -84,6 +90,8 @@
                 <li><a href="products.html" class="active">products</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="connect.html">connect</a></li>
+                <li><a href="testimonials.html">testimonials</a></li>
+                <li><a href="tools.html">gear &amp; tools</a></li>
             </ul>
         </nav>    
     </footer>
@@ -103,5 +111,15 @@
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const hamburger = document.getElementById('hamburger');
+          const navPanel  = document.getElementById('navPanel');
+          const navClose  = document.getElementById('navClose');
+      
+          hamburger.addEventListener('click',  () => navPanel.classList.add('open'));
+          navClose.addEventListener('click',    () => navPanel.classList.remove('open'));
+        });
+      </script>
 </body>
 </html>

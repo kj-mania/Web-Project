@@ -1,5 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
 
+html, body {
+    height: 100%;
+    background: url('04.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }  
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
 /*  set up global styles */
 * {
     margin: 0;
@@ -44,6 +53,7 @@
 
 
 .heroOverlay h1 {
+    overflow: visible;
     background-size: cover;
     background: url('vivid-blurred-colorful-wallpaper-background_58702-4377.jpg') no-repeat center center;
     -webkit-text-fill-color: transparent;
@@ -77,6 +87,7 @@
     color: white;
 }
 .heroOverlay h1 {
+    overflow: visible;
     font-size: clamp(2.0rem, 5vw, 4rem);
     line-height: 0.8;
     margin: 0;
@@ -189,6 +200,28 @@
     width: 100%;
     height: auto;
     border-bottom: 2px solid orange;
+}
+.video-thumb {
+  position: relative;
+  overflow: hidden;
+}
+.video-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid orange;
+}
+.play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: rgba(255,255,255,0.8);
+  pointer-events: none;
+}
+.video-thumb:hover .play-overlay {
+  color: white;
 }
 
 
@@ -336,16 +369,18 @@
 
 /* price table  */
 .pricing {
-    background-color: #1E1E1E;
+    background-color: transparent;
     padding: 50px;
 }
+
 table.pricing-table {
     width: 100%;
     max-width: 800px; 
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: #2c2c2c;
+    background-color: transparent;
 }
+
 table.pricing-table th {
     background-color: orange;
     color: #1E1E1E;
@@ -353,27 +388,28 @@ table.pricing-table th {
     border: 2px solid orange;
     text-align: center;
 }
-table.pricing-h2 {
-    align-items: center;
-}
+
 table.pricing-table td {
+    background-color: transparent;
     padding: 10px;
     border: 2px solid orange;
     text-align: center;
     color: white;
 }
+
 .pricing h2 {
     text-align: center;
     padding: 10px;
     font-size: 28px;
     color: orange;
 }
-  
+
+/* pricing row on about page */
 .about-pricing-row {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    background-color: #1E1E1E;
+    background-color: transparent;
     padding: 50px;
     gap: 50px;
     flex-wrap: wrap;
@@ -399,6 +435,7 @@ table.pricing-table td {
     list-style: none;
     padding-left: 0;
 }
+
 .about-pricing-row ul li::before {
     content: "● ";
     color: orange;
@@ -410,6 +447,7 @@ table.pricing-table td {
     color: white;
     margin-bottom: 8px;
 }
+
 
   
   
@@ -468,7 +506,7 @@ margin-bottom: 10px;
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 250px)); /* Fixed column width */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px));
     justify-content: center; 
     gap: 30px;
     padding: 20px 0;
@@ -665,3 +703,251 @@ margin-bottom: 10px;
     transform: translateY(0);
   }
   
+
+
+
+
+
+.headerBar { position: relative; z-index: 2000; }
+.hamburger {
+  display: flex;       
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  padding: 0;
+}
+.hamburger span {
+  display: block;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+
+.nav-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #1E1E1E;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 2100;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.7);
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  font-size: 2rem;
+}
+.nav-panel.open {
+  transform: translateX(0);
+}
+.nav-close {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 1em;
+}
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.nav-list li + li {
+    margin-top: 0.4em;   
+}
+.nav-list a {
+    display: block;
+    padding: 7px 15px;
+    font-size: 3rem;     
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.nav-list a:hover {
+  background: rgba(255,165,0,0.2);
+  color: orange;
+}
+#navPanel {
+    width: 33vw;
+    font-size: 1.2rem !important;
+  }
+  #navPanel .nav-list li + li {
+    margin-top: 0.1rem !important;
+  }
+  #navPanel .nav-list a {
+    display: block;
+    font-size: 3.5rem !important;
+    padding: .5rem 1.2rem !important;
+  }
+  
+
+
+.content,
+.sub-content,
+.portfolio-gallery,
+.about-content,
+.contact-section,
+.pricing,
+.footer {
+  background-color: transparent !important;
+}
+
+
+
+table.pricing-table {
+background-color: transparent !important;
+}
+table.pricing-table th,
+table.pricing-table td {
+background-color: transparent !important;
+}
+.faq-section,
+.faq-container,
+.faq-item summary,
+.faq-content {
+background-color: transparent !important;
+}
+table.pricing-table th,
+table.pricing-table td,
+.faq-item summary,
+.faq-content p {
+border-color: orange !important;
+color: white !important;
+}
+  
+
+/* Testimonials Section */
+.testimonials-section {
+    padding: 60px 20px;
+    background: transparent;
+    text-align: center;
+    padding-bottom: 15rem;
+  }
+  .testimonials-section h2 {
+    font-size: 2.5rem;
+    color: orange;
+    margin-bottom: 40px;
+  }
+  /* layout */
+  .testimonials-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  /* cards */
+  .testimonial-item {
+    background: #333;
+    border: 2px solid orange;
+    border-radius: 8px;
+    padding: 25px;
+    position: relative;
+  }
+  .testimonial-item::before {
+    content: "“";
+    font-size: 4rem;
+    color: rgba(255,165,0,0.3);
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+  .testimonial-text {
+    font-style: italic;
+    color: #eee;
+    margin: 20px 0;
+    line-height: 1.4;
+  }
+  .testimonial-author {
+    font-weight: bold;
+    color: white;
+    text-align: right;
+    margin-top: 10px;
+  }
+  
+
+
+
+
+
+/* Section wrapper */
+.gear-section {
+    padding: 60px 20px;
+    background: transparent;
+    text-align: center;
+  }
+  
+  /* Section title */
+  .gear-section h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: orange;
+    margin-bottom: 40px;
+  }
+  
+  /* Grid layout */
+  .gear-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  
+  /* Individual gear card */
+  .gear-item {
+    background: #333;
+    border: 2px solid orange;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Gear image/logo */
+  .gear-item img {
+    max-width: 80px;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  /* Gear name */
+  .gear-item h3 {
+    font-size: 1.25rem;
+    color: white;
+    margin: 10px 0;
+  }
+  
+  /* Gear description */
+  .gear-item p {
+    font-size: 1rem;
+    color: #ccc;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  /* Fade-in animation */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }

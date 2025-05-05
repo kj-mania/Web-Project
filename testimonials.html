@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Read client testimonials for Clippers by KJ—real feedback on sports highlight reels, wedding videos, and graphic work.">    
+    <title>Testimonials | Clips by KJ</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="cbkj.png">
+</head>
+<body>
+  <header class="headerBar">
+    <div class="logo">
+      <img src="cbkj.png" alt="CBKJ Logo">
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="navPanel" class="nav-panel" aria-label="Mobile navigation">
+      <button id="navClose" class="nav-close" aria-label="Close menu">×</button>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="connect.html">Contact</a></li>
+        <li><a href="testimonials.html" class="active">Testimonials</a></li>
+        <li><a href="tools.html">Gear/Tools</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section class="testimonials-section fade-in">
+    <h2>What Clients Are Saying</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-item fade-in">
+        <p class="testimonial-text">“KJ’s mixtape brought my game to life and I got a ton of compliments on the editing!”</p>
+        <p class="testimonial-author">— Brayden Emory, All-State Basketball Player</p>
+      </div>
+      <div class="testimonial-item fade-in">
+        <p class="testimonial-text">“Our wedding video captured every emotion. The quality was outstanding, and it fit our budget perfectly.”</p>
+        <p class="testimonial-author">— Shaun & Chloe Gaskin</p>
+      </div>
+      <div class="testimonial-item fade-in">
+        <p class="testimonial-text">“KJ's color, style, and methods brought the coolest moments to life. I love the track pictures he took.”</p>
+        <p class="testimonial-author">— Conner Changizi, D1 Track Athlete</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer fade-in">
+    <br>
+    <p>Kellen Andrews</p>
+    <a href="mailto:kandre15@my.westga.edu">kandre15@my.westga.edu</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="products.html">products</a></li>
+        <li><a href="about.html">about</a></li>
+        <li><a href="connect.html">connect</a></li>
+        <li><a href="testimonials.html" class="active">testimonials</a></li>
+        <li><a href="tools.html">gear &amp; tools</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const hamburger = document.getElementById('hamburger');
+      const navPanel  = document.getElementById('navPanel');
+      const navClose  = document.getElementById('navClose');
+      hamburger.addEventListener('click', () => navPanel.classList.add('open'));
+      navClose.addEventListener('click', () => navPanel.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
