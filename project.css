@@ -976,3 +976,106 @@ color: white !important;
     width: 100% !important;
     background: transparent !important;
 }
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .headerBar {
+      padding: 10px 20px;
+    }
+    .headerBar .logo img {
+      height: 60px;
+    }
+    .hamburger {
+      width: 24px;
+      height: 18px;
+    }
+    .nav-list a {
+      font-size: 1.5rem !important;
+      padding: 0.5rem !important;
+    }
+  
+    .heroSection {
+      height: auto;
+      padding: 60px 0;
+    }
+    .heroOverlay h1 {
+      font-size: clamp(1.5rem, 8vw, 2.5rem);
+    }
+      .main-content {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .main-content img {
+        width: 45rem;
+    }
+    .main-content .text {
+      width: 100%;
+    }
+    .main-content h2 {
+      font-size: 1.75rem;
+    }
+  
+    .sub-content,
+    .testimonials-grid {
+      grid-template-columns: 1fr !important;
+    }
+    .sub-item,
+    .testimonial-item {
+      width: 100% !important;
+      padding-bottom: 2rem;
+    }
+  
+    .portfolio-grid,
+    .gear-grid {
+      grid-template-columns: 1fr !important;
+    }
+  
+    .sub-item h3,
+    .portfolio-category h2,
+    .portfolio-category h3,
+    .testimonials-section h2,
+    .gear-section h2 {
+      font-size: 1.5rem;
+    }
+      .footer nav {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      justify-items: center; 
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about-section {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+    }
+  
+    .about-section img,
+    .about-section .text {
+      width: 100%;
+    }
+  
+    .about-section img {
+      margin-bottom: 1rem;
+    }
+  }
+  
+#navPanel .nav-list a {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+#navPanel .nav-list a {
+    font-size: 1.8rem !important;
+    padding: 0.8rem 1rem !important;
+}
+#navPanel {
+    width: 40vw !important;
+    max-width: 300px;
+}
