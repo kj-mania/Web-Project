@@ -1006,7 +1006,7 @@ color: white !important;
       gap: 20px;
     }
     .main-content img {
-        width: 45rem;
+        width: 100%;
     }
     .main-content .text {
       width: 100%;
