@@ -1089,3 +1089,11 @@ color: white !important;
       display: block;
     }
   }
+
+  .hamburger span {
+    display: block !important;
+    width: 100% !important;         /* make each bar as wide as the button */
+    height: 3px !important;         /* bar thickness */
+    background-color: white !important;
+    border-radius: 2px !important;
+  }
